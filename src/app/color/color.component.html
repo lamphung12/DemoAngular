@@ -1,0 +1,10 @@
+<p>Color works!</p>
+<div>
+  <label for="color">Chọn màu:</label>
+  <input #target id="color" type="color" [value]="background" (change)="onChange(target.value)">
+</div>
+<div>
+  <div  style="width: 250px; height: 250px" [style.background]="background">
+  </div>
+</div>
+
