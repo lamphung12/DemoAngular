@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { HackernewComponent } from './hackernew.component';
+
+describe('HackernewComponent', () => {
+  let component: HackernewComponent;
+  let fixture: ComponentFixture<HackernewComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ HackernewComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(HackernewComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

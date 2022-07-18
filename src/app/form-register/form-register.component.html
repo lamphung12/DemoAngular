@@ -1,0 +1,56 @@
+<p>form-register </p>
+<form [formGroup] = 'form' (submit)="register()" >
+  <p>Email</p>
+  <input type="text"  formControlName="email" class="form-control">
+  <div
+    *ngIf="!form.controls.email?.valid && (form.controls.email?.dirty
+    ||form.controls.email?.touched)">
+    Email is not valid
+  </div>
+  <p>Password</p>
+  <input type="text" formControlName="password" class="form-control">
+  <div
+    *ngIf="!form.controls.password?.valid && (form.controls.password?.dirty
+    ||form.controls.email?.touched)">
+    Vui lòng nhập mật khẩu gồm 6 ký tự trở lên
+  </div>
+  <p>ConfirmPassword</p>
+  <input type="text" formControlName="confirmPassword" class="form-control">
+  <div
+    *ngIf="!form.controls.confirmPassword?.valid && (form.controls.confirmPassword?.dirty
+    ||form.controls.confirmPassword?.touched)">
+    Vui lòng nhập giống nhau
+  </div>
+
+  <p>Country</p>
+  <select formControlName="country">
+    <option  >Hà Nôi</option>
+    <option >Hồ Chí Minh</option>
+    <option >Đà Nẵng </option>
+  </select>
+
+  <p>Age</p>
+  <input type="number" formControlName="age" class="form-control">
+  <div
+    *ngIf="!form.controls.age?.valid && (form.controls.age?.dirty
+    ||form.controls.age?.touched)">
+    Vui lòng nhập số;
+  </div>
+
+  <p>Gender</p>
+  <select formControlName="gender">
+    <option>Nam</option>
+    <option>Nu</option>
+  </select>
+  <p>Phone</p>
+  <input type="number" formControlName="phone" class="form-control">
+  <div
+    *ngIf="!form.controls.phone?.valid && (form.controls.phone?.dirty
+    ||form.controls.phone?.touched)">
+    Vui lòng nhập số;
+  </div>
+
+  <button type="submit" [disabled]="!form.valid" (click)="re()">Submit</button>
+
+</form>
+
