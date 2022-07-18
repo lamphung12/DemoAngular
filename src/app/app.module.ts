@@ -18,6 +18,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { AngularRatingBarComponent } from './angular-rating-bar/angular-rating-bar.component';
 import { TodoComponent } from './todo/todo.component';
 import { FormRegisterComponent } from './form-register/form-register.component';
+import { TimelinesAppComponent } from './timelines-app/timelines-app.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FormRegisterComponent } from './form-register/form-register.component';
      AngularRatingBarComponent,
      TodoComponent,
      FormRegisterComponent,
+     TimelinesAppComponent,
 
   ],
     imports: [
